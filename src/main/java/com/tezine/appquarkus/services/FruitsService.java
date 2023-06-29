@@ -7,7 +7,6 @@ import org.bson.types.ObjectId;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoCursor;
 import com.mongodb.client.model.Filters;
-import com.mongodb.client.model.Updates;
 import com.tezine.appquarkus.beans.Fruit;
 import com.tezine.appquarkus.codes.Logger;
 

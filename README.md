@@ -4,14 +4,18 @@ A Quarkus Java bootstrap application using Rest and MongoDB.
 
 ## Running the application in dev mode
 
-You can run your application in dev mode that enables live coding using:
+Follow the steps below to run the app in dev mode:
+
+1. Update the MongoDB connection string to match your connection in `application.properties` . 
+2. Create a database named `testmongo` or change the name `testmongo` used in the method `FruitsService.getCollection()`
+3. Run the app with live coding using:
+
 ```shell script
 ./mvnw compile quarkus:dev
 ```
 
-> **_NOTE:_**  Quarkus ships with a Dev UI, which is available in dev mode only at http://localhost:8080/q/dev/
-
-Swagger is available at http://localhost:8080/q/swagger-ui/
+* Quarkus ships with a Dev UI, which is available in dev mode only at http://localhost:8080/q/dev/
+* Swagger is available at http://localhost:8080/q/swagger-ui/
 
 ## Packaging and running the application
 
