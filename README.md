@@ -31,6 +31,8 @@ The application is now runnable using `java -jar target/quarkus-app/quarkus-run.
 If you want to build an _über-jar_, execute the following command:
 ```shell script
 ./mvnw package -Dquarkus.package.type=uber-jar
+//In powershell, execute the following
+./mvnw package "-Dquarkus.package.type=uber-jar"
 ```
 
 The application, packaged as an _über-jar_, is now runnable using `java -jar target/*-runner.jar`.
@@ -45,6 +47,8 @@ You can create a native executable using:
 Or, if you don't have GraalVM installed, you can run the native executable build in a container using: 
 ```shell script
 ./mvnw package -Pnative -Dquarkus.native.container-build=true
+//In powershell, execute the following
+./mvnw package -Pnative "-Dquarkus.native.container-build=true"
 ```
 
 You can then execute your native executable with: `./target/app-quarkus-1.0.0-runner`
