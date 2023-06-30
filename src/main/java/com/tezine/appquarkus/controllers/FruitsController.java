@@ -1,9 +1,10 @@
-package com.tezine.appquarkus.resources;
+package com.tezine.appquarkus.controllers;
 import org.eclipse.microprofile.openapi.annotations.Operation;
 import org.eclipse.microprofile.openapi.annotations.enums.SchemaType;
 import org.eclipse.microprofile.openapi.annotations.media.Content;
 import org.eclipse.microprofile.openapi.annotations.media.Schema;
 import org.eclipse.microprofile.openapi.annotations.responses.APIResponse;
+import org.eclipse.microprofile.openapi.annotations.security.SecurityScheme;
 import org.eclipse.microprofile.openapi.annotations.tags.Tag;
 
 import com.tezine.appquarkus.beans.Fruit;
@@ -12,14 +13,16 @@ import com.tezine.appquarkus.services.FruitsService;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 import jakarta.ws.rs.core.Response.Status;
+import jakarta.enterprise.context.RequestScoped;
 import jakarta.inject.Inject;
 import jakarta.ws.rs.*;
 
-@Path("/fruits")
-@Tag(name = "FruitsService", description = "Fruits operations.")
+@RequestScoped
+@Path("/v1/fruits")
+@Tag(name = "FruitsController", description = "Fruits operations.")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
-public class FruitsResource {
+public class FruitsController {
 
     @Inject FruitsService fruitService;
 

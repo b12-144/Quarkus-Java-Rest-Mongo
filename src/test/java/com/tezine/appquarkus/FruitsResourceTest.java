@@ -10,9 +10,9 @@ import static org.hamcrest.CoreMatchers.is;
 public class FruitsResourceTest {
 
     @Test
-    public void testHelloEndpoint() {
+    public void testGetFruitsEndpoint() {
         given()
-          .when().get("/fruits/get-fruits")
+          .when().get("/v1/fruits/get-fruits")
           .then()
              .statusCode(200);
 
